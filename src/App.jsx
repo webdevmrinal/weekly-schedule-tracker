@@ -53,7 +53,7 @@ function App() {
 
   const getCurrentDateISO = () => {
     const currentDate = new Date();
-    return currentDate.toLocaleDateString("en-CA"); // This gives YYYY-MM-DD format in local timezone
+    return currentDate.toLocaleDateString("en-CA");
   };
 
   const getCurrentDateSchedule = () => {
@@ -81,7 +81,7 @@ function App() {
   return (
     <>
       <button
-        className="mx-8 my-6"
+        className="m-2 md:mx-8 md:my-6 md:static relative left-1/2 -translate-x-1/2 md:translate-x-0"
         onClick={() => {
           setShowPopup(true);
         }}
