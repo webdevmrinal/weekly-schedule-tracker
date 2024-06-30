@@ -1,0 +1,90 @@
+{
+    "targetDate": {
+        "start": "2024-06-26",
+        "end": "2024-07-01"
+    },
+    "subjects": [
+        {
+            "name": "DBMS",
+            "schedule": [
+                {
+                    "date": "2024-06-26",
+                    "lecture": "Module 1: Lecture 1 to Lecture 2C",
+                    "duration": "3 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-27",
+                    "lecture": "Module 1: Lecture 2D to Lecture 3",
+                    "duration": "3 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-28",
+                    "lecture": "Module 1: Lecture 4A to Lecture 4C",
+                    "duration": "3 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-29",
+                    "lecture": "Module 1: Lecture 5A to Lecture 5B",
+                    "duration": "4 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-30",
+                    "lecture": "Module 1: Lecture 5C to Lecture 5D",
+                    "duration": "3 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-07-01",
+                    "lecture": "Module 1: Lecture 5E",
+                    "duration": "2 hours",
+                    "complete": false
+                }
+            ]
+        },
+        {
+            "name": "C Programming",
+            "schedule": [
+                {
+                    "date": "2024-06-26",
+                    "lecture": "",
+                    "duration": "",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-27",
+                    "lecture": "",
+                    "duration": "",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-28",
+                    "lecture": "Module 3: Lecture 10A to Lecture 10D",
+                    "duration": "1.5 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-29",
+                    "lecture": "Lecture 11A - Practice Questions Lecture",
+                    "duration": "1.5 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-06-30",
+                    "lecture": "Module 3: Lecture 11B to Lecture 11D",
+                    "duration": "1.5 hours",
+                    "complete": false
+                },
+                {
+                    "date": "2024-07-01",
+                    "lecture": "Module 3: Lecture 11B to Lecture 11D",
+                    "duration": "1.5 hours",
+                    "complete": false
+                }
+            ]
+        }
+    ]
+}

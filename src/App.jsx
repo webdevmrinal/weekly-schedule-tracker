@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import axios from "axios";
 
 function App() {
   const [showPopup, setShowPopup] = useState(false);
@@ -7,10 +8,10 @@ function App() {
   const [timeRemaining, setTimeRemaining] = useState("");
 
   useEffect(() => {
-    const storedData = localStorage.getItem("scheduleData");
-    if (storedData) {
-      setScheduleData(JSON.parse(storedData));
-    }
+    axios
+      .get("https://schedule-api-ecru.vercel.app/api/schedule")
+      .then((response) => setScheduleData(response.data))
+      .catch((error) => console.error("Error fetching schedule data", error));
 
     const calculateTimeRemaining = () => {
       const now = new Date();
@@ -77,14 +78,16 @@ function App() {
   };
 
   const currentDateSchedule = getCurrentDateSchedule();
+  console.log("data", scheduleData);
 
   return (
     <>
       <button
-        className="m-2 md:mx-8 md:my-6 md:static relative left-1/2 -translate-x-1/2 md:translate-x-0"
+        className="m-2 md:mx-8 md:my-6 md:static relative left-1/2 -translate-x-1/2 md:translate-x-0 opacity-0"
         onClick={() => {
           setShowPopup(true);
         }}
+        disabled
       >
         Update Schedule
       </button>
@@ -178,7 +181,12 @@ function Popup({ setShowPopup, setScheduleData }) {
   };
 
   return (
-    <div className="w-screen h-screen absolute top-0 left-0 z-10 bg-[rgba(0,0,0,0.5)] flex items-center justify-center" onClick={(e)=>{e.stopPropagation();}}>
+    <div
+      className="w-screen h-screen absolute top-0 left-0 z-10 bg-[rgba(0,0,0,0.5)] flex items-center justify-center"
+      onClick={(e) => {
+        e.stopPropagation();
+      }}
+    >
       <div className="w-1/2 h-1/2 bg-gray-900 py-4 px-8">
         <div className="text-center">Enter JSON:</div>
         <textarea
